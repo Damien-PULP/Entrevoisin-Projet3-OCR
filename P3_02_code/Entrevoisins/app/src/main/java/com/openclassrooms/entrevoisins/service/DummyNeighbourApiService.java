@@ -46,7 +46,7 @@ public class DummyNeighbourApiService implements  NeighbourApiService {
         Neighbour neighbour = DummyNeighbourGenerator.generateNeighbourRandom();
 
         //for the neighbours have unique id
-        neighbour.setId(neighbours.get(neighbours.size() - 1).getId() + 1);
+        neighbour.setId(neighbours.get(neighbours.size()).getId());
         neighbours.add(neighbour);
     }
 
@@ -59,8 +59,7 @@ public class DummyNeighbourApiService implements  NeighbourApiService {
     @Override
     public void removeFavoriteNeighbour (Neighbour neighbour){
         favoriteNeighbour.remove(neighbour);
-        // for refresh list of favorite neighbours
-        EventBus.getDefault().post(new RefreshListFavoriteEvent());
+
     }
 
     @Override

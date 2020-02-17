@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.openclassrooms.entrevoisins.R;
+import com.openclassrooms.entrevoisins.events.RefreshListFavoriteEvent;
 import com.openclassrooms.entrevoisins.events.RemoveFavoriteNeighbourEvent;
 import com.openclassrooms.entrevoisins.events.StartInfoActivityEvent;
 import com.openclassrooms.entrevoisins.model.Neighbour;
@@ -47,7 +48,11 @@ public class MyFavoriteNeighbourRecyclerViewAdapter extends RecyclerView.Adapter
                 .apply(RequestOptions.circleCropTransform())
                 .into(holder.mNeighbourAvatar);
 
-        holder.mDeleteButton.setOnClickListener(v -> EventBus.getDefault().post(new RemoveFavoriteNeighbourEvent(neighbour)));
+        holder.mDeleteButton.setOnClickListener(v -> {
+            EventBus.getDefault().post(new RemoveFavoriteNeighbourEvent(neighbour));
+            // for refresh list of favorite neighbours
+            EventBus.getDefault().post(new RefreshListFavoriteEvent());
+        });
 
         holder.mItemInstance.setOnClickListener(v -> EventBus.getDefault().post(new StartInfoActivityEvent(neighbour)));
 

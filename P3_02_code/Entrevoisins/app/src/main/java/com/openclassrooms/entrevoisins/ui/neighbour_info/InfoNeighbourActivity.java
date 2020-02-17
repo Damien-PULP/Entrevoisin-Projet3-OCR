@@ -89,21 +89,21 @@ public class InfoNeighbourActivity extends AppCompatActivity {
     }
     private void UpdateUINeighbour (Neighbour neighbour){
 
-        String nameNeigbour = neighbour.getName();
+        String nameNeighbour = neighbour.getName();
         String description = neighbour.getAbout();
         String location = neighbour.getAddress();
         String number_phone = neighbour.getPhoneNumber();
         String profil_facebook = neighbour.getProfilFacebook();
 
         /** Update LAYOUT */
-        toolbar.setTitle(nameNeigbour);
+        toolbar.setTitle(nameNeighbour);
 
         Glide.with(imgCollapsingHeader.getContext())
                 .load(neighbour.getAvatarUrl())
                 .fitCenter()
                 .into(imgCollapsingHeader);
 
-        mTextView_NameNeighbour.setText(nameNeigbour);
+        mTextView_NameNeighbour.setText(nameNeighbour);
         mTextView_About.setText(description);
         mTextView_location.setText(location);
         mTextView_number_phone.setText(number_phone);

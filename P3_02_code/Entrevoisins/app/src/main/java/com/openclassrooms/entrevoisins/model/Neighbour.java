@@ -84,11 +84,27 @@ public class Neighbour {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Neighbour neighbour = (Neighbour) o;
-        return Objects.equals(id, neighbour.id);
+
+        if(o != null && (o.getClass().equals(this.getClass()))){
+            Neighbour neighbourToCompare = (Neighbour) o;
+            if(neighbourToCompare.getId().equals(this.getId()) &&
+                    neighbourToCompare.getName().equals(this.getName()) &&
+                    neighbourToCompare.getAbout().equals(this.getAbout()) &&
+                    neighbourToCompare.getAddress().equals(this.getAddress()) &&
+                    neighbourToCompare.getAvatarUrl().equals(this.getAvatarUrl()) &&
+                    neighbourToCompare.getPhoneNumber().equals(this.getPhoneNumber()) &&
+                    neighbourToCompare.getProfilFacebook().equals(this.getProfilFacebook())){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+
     }
+
+
 
     @Override
     public int hashCode() {
