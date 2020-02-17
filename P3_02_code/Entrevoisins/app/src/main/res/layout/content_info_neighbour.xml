@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6E6E6"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.neighbour_info.InfoNeighbourActivity"
+    tools:showIn="@layout/activity_info_neighbour">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:background="#FFFFFF"
+            android:elevation="@dimen/classic_shadow"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/activity_info_neighbour_text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:text="Name neighbour"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/size_text_Title" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/text_margin"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_location24dp" />
+
+                <TextView
+                    android:id="@+id/activity_info_neighbour_text_adress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:text="location"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/size_text_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/text_margin"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_call_24dp" />
+
+                <TextView
+                    android:id="@+id/activity_info_neighbour_text_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:text="phone number"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/size_text_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/text_margin"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_langage_24dp" />
+
+                <TextView
+                    android:id="@+id/activity_info_neighbour_profil_facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:text="profil facebook"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/size_text_normal" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/fab_margin"
+            android:background="#FFFFFF"
+            android:elevation="@dimen/classic_shadow"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/activity_info_neighbour_text_a_propos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:text="A propos de moi"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/size_text_Title"></TextView>
+
+            <TextView
+                android:id="@+id/activity_info_neighbour_text_a_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:text="@string/large_text"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="@dimen/size_text_normal"></TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
