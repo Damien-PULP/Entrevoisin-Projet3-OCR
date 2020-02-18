@@ -46,7 +46,8 @@ public class DummyNeighbourApiService implements  NeighbourApiService {
         Neighbour neighbour = DummyNeighbourGenerator.generateNeighbourRandom();
 
         //for the neighbours have unique id
-        neighbour.setId(neighbours.get(neighbours.size()).getId());
+        int id = neighbours.size();
+        neighbour.setId(id);
         neighbours.add(neighbour);
     }
 
